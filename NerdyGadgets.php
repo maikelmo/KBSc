@@ -25,7 +25,6 @@ $content = $ophalen->fetchAll();
             <td> <?= $row['functie'] ?> </td>
             <td>
                 <form method="post" action="includes/wijzigen.php">
-                    <label for="wijzigen">Wijzigen</label>
                     <select name="wijzigen" id="wijzigen" onchange="this.form.submit()">
                         <option>Teamleider</option>
                         <option>Notulist</option>
