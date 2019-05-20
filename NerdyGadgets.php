@@ -21,9 +21,9 @@ $content = $ophalen->fetchAll();
     </tr>
     <?php foreach($content as $row): ?>
         <tr>
-            <th> <?= $row['naam'] ?> </th>
-            <th> <?= $row['functie'] ?> </th>
-            <th>
+            <td> <?= $row['naam'] ?> </td>
+            <td> <?= $row['functie'] ?> </td>
+            <td>
                 <form method="post" action="includes/wijzigen.php">
                     <label for="wijzigen">Wijzigen</label>
                     <select name="wijzigen" id="wijzigen" onchange="this.form.submit()">
@@ -34,13 +34,13 @@ $content = $ophalen->fetchAll();
                     </select>
                     <input type="hidden" name="ID" value="<?= $row['id'] ?>">
                 </form>
-            </th>
-            <th>
+            </td>
+            <td>
                 <form method="post" action="includes/verwijder.php">
                     <input type="hidden" name="ID_1" value="<?= $row['id'] ?>">
                     <input type="submit" name="verwijder" value="Verwijderen">
                 </form>
-            </th>
+            </td>
         </tr>
     <?php endforeach; ?>
 </table>
