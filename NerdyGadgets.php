@@ -31,7 +31,7 @@ $content = $ophalen->fetchAll();
                         <option>Notulist</option>
                         <option>Kwaliteitbeheer</option>
                         <option>Planner</option>
-                    </select>'.
+                    </select>
                     <input type="hidden" name="ID" value="<?= $row['id'] ?>">
                 </form>
             </th>
